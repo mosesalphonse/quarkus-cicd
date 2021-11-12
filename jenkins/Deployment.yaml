@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: rafabene/myjenkins
+        image: gcr.io/moses-327312/rafabene/myjenkins
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
