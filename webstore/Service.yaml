@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: cloudnative
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     name: default-port
