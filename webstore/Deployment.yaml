@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: cloudnative
-        image: rafabene/cloudnative
+        image: gcr.io/moses-327312/rafabene/myjenkins
         imagePullPolicy: IfNotPresent
         resources:
           requests:
