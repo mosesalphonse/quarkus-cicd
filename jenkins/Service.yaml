@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: myjenkins
-  type: LoadBalancer
+  type: NodePort
   ports:
   - protocol: TCP
     name: slave-port
