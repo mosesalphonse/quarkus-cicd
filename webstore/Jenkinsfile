@@ -5,7 +5,7 @@ kind: Pod
 spec:
   containers:
   - name: maven
-    image: rafabene/jenkins-slave
+    image: gcr.io/moses-327312/rafabene/jenkins-slave
     imagePullPolicy: IfNotPresent
     tty: true
     command: ["cat"]
@@ -29,7 +29,7 @@ spec:
         container("maven"){
            stage ('SCM checkout'){
                 echo 'Checking out git repository'
-                git poll: true, url: 'https://github.com/rafabene/cicd-kb8s'
+                git poll: true, url: 'https://github.com/mosesalphonse/quarkus-cicd'
             }
         
             stage ('Maven native build'){
@@ -42,7 +42,7 @@ spec:
             stage ('Docker image build'){
                 echo 'Building docker image'
                 dir('webstore') {
-                    sh 'docker build -t rafabene/cloudnative -f src/main/docker/Dockerfile.native .'
+                    sh 'docker build -t gcr.io/moses-327312/rafabene/cloudnative -f src/main/docker/Dockerfile.native .'
                 }       
             }
 
